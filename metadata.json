@@ -1,0 +1,6 @@
+{
+  "name": "PAS-Twin 3D",
+  "description": "Interactive 3D Digital Twin & Simulation for Public Address System (Microphone Paging, Network Control Unit, and Ceiling Speaker).",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}

@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0B1118;
+    color: #F1F5F9;
+  }
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom precision sliders */
+input[type="range"].pas-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].pas-slider::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: 9999px;
+  background: #1E293B;
+  border: 1px solid #334155;
+}
+
+input[type="range"].pas-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #38BDF8;
+  border: 2px solid #0B1118;
+  margin-top: -6px;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"].pas-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+  background: #7DD3FC;
+}
+
+input[type="range"].pas-slider:focus-visible {
+  outline: none;
+}
+
+input[type="range"].pas-slider:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35);
+}
+
+/* Subtle dark scrollbars for drawer */
+.pas-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.pas-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pas-scroll::-webkit-scrollbar-thumb {
+  background: #273549;
+  border-radius: 3px;
+}
+
+.pas-scroll::-webkit-scrollbar-thumb:hover {
+  background: #3B4E6B;
+}
